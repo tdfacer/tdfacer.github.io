@@ -20,3 +20,4 @@ See this stuff
 <!-- [Posts](https://tdfacer.github.io/). -->
 [Posts](nginx).
 [Tech](tech).
+[Linux](https://tdfacer.github.io/tech/linux).
