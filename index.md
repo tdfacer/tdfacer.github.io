@@ -11,5 +11,12 @@ paginate:
 
 See this stuff
 
+# Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
 <!-- [Posts](https://tdfacer.github.io/). -->
 [Posts](nginx).
+[Tech](tech).
