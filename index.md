@@ -21,3 +21,5 @@ See this stuff
 [Posts](nginx).
 [Tech](tech).
 [Linux](https://tdfacer.github.io/tech/linux).
+[NeoVim](https://tdfacer.github.io/tech/neovim).
+[Nginx](https://tdfacer.github.io/tech/nginx).
