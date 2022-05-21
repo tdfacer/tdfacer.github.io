@@ -53,3 +53,12 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+collections:
+  tech:
+    output: true
+    permalink: /:collection/:name
+
+# collections:
+#   my_collection:
+#     output: true
+#     permalink: /:collection/:name
