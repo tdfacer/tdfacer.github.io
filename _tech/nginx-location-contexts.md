@@ -67,6 +67,67 @@ location ~ \.(gif|jpg|jpeg)$ {
 }
 ```
 
+## Regex
+
+Note that the order of the regex location contexts is important. For example, consider the following:
+
+### from
+
+```nginx
+server {
+    listen       80;
+    server_name  localhost;
+
+    location ~* \.(gif|jpg|jpeg)$ {
+      return 200 "hello from ~* .(gif|jpg|jpeg)";
+    }
+
+    location ~ \.(gif|jpg|jpeg)$ {
+      return 200 "hello from ~ .(gif|jpg|jpeg)";
+    }
+}
+```
+
+#### results
+
+```bash
+curl localhost/arbitrary/image.gif
+> hello from ~* .(gif|jpg|jpeg)
+
+curl localhost/arbitrary/image.GIF
+> hello from ~* .(gif|jpg|jpeg)
+````
+
+### to
+
+```nginx
+server {
+    listen       80;
+    server_name  localhost;
+
+    location ~ \.(gif|jpg|jpeg)$ {
+      return 200 "hello from ~ .(gif|jpg|jpeg)";
+    }
+
+    location ~* \.(gif|jpg|jpeg)$ {
+      return 200 "hello from ~* .(gif|jpg|jpeg)";
+    }
+}
+```
+
+#### results
+
+```bash
+curl localhost/arbitrary/image.gif
+> hello from ~ .(gif|jpg|jpeg)
+
+curl localhost/arbitrary/image.GIF 
+> hello from ~* .(gif|jpg|jpeg)
+````
+
+* We can see that in the _first_ example, where we had the `case-insensitive` matching first, both requests were evaluated by the case-insensitive match, regardless of the casing.
+* We can see that in the _second_ example, where we had the `case-sensitive` matching first, the request that did not match case was not evaluated by the case-sensitive match, falling through to the case-insensitive match.
+
 ## Docker Example
 
 * See demo Docker container [here](https://tdfacer.github.io/tech/nginx-docker).
