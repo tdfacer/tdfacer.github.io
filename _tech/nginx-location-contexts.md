@@ -131,6 +131,7 @@ curl localhost/arbitrary/image.GIF
 ## Docker Example
 
 * See demo Docker container [here](https://tdfacer.github.io/tech/nginx-docker).
+* The following test cases were evaluated using an nginx container built with the `default.conf` from the example.
 
 ### Test Cases
 
