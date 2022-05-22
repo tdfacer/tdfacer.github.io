@@ -22,7 +22,7 @@ I want to create a bash script, `keyboard_tweaks.sh`, that will apply the follow
 _Note:_ The tradeoff here is that one can no longer use `Shift_R` as a standard shift modifier for the keys that we are tweaking. In my experience, it is very easy to get used to using _only_ `Shift_L` for this, and the gained functionality from these tweaks is well worth it.
 
 * Remap `Caps_Lock` and `Escape` keys
-* Remap `Shift_R<hjkl>` to `Left`, `Down`, `Up`, `Right` respectively
+* Remap `Shift_R<hjkl0$>` to `Left`, `Down`, `Up`, `Right`, `Home`, `End` respectively
 * Increase depressed key auto-repeat rate
 
 ---
