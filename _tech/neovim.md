@@ -7,3 +7,5 @@ categories: tech neovim
 This is where I will discuss neovim tech
 
 [NeoVim Lua](https://tdfacer.github.io/tech/neovim-lua)
+[NeoVim Plugins](https://tdfacer.github.io/tech/neovim-plugins)
+
