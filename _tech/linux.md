@@ -7,3 +7,4 @@ categories: tech linux
 This is where I will discuss linux tech
 
 [xmodmap-vim-bindings](https://tdfacer.github.io/tech/linux-xmodmap-vim-bindings)
+[xmodmap-vim-bindings](https://tdfacer.github.io/tech/linux-i3-wm)
