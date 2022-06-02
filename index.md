@@ -9,8 +9,6 @@ paginate:
 
 # Trevor Facer
 
-See this stuff
-
 # Contents
 {:.no_toc}
 
@@ -22,5 +20,6 @@ See this stuff
 [Tech](tech).
 [Linux](https://tdfacer.github.io/tech/linux).
 [Lua](https://tdfacer.github.io/tech/lua).
+[Jekyll](https://tdfacer.github.io/tech/jekyll).
 [NeoVim](https://tdfacer.github.io/tech/neovim).
 [Nginx](https://tdfacer.github.io/tech/nginx).
