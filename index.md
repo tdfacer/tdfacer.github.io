@@ -18,6 +18,7 @@ paginate:
 <!-- [Posts](https://tdfacer.github.io/). -->
 [Posts](nginx).
 [Tech](tech).
+[AWS](https://tdfacer.github.io/tech/aws).
 [Linux](https://tdfacer.github.io/tech/linux).
 [Lua](https://tdfacer.github.io/tech/lua).
 [Jekyll](https://tdfacer.github.io/tech/jekyll).
