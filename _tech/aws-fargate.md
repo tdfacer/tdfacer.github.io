@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AWS Docker"
+title:  "AWS Fargate"
 date:   2022-05-21 14:07:21 -0600
 categories: tech aws fargate
 tags: tech aws fargate
@@ -16,6 +16,130 @@ author: Trevor Facer
 * Allows one to run containers in AWS without managing servers/instances
   * No provisioning/scaling/configuring clusters (aside from ECS Fargate config)
 * Runs Amazon Linux 2
+
+## Roles
+
+Two types of roles are used by ECS:
+
+### Task Role
+
+This is the role that the task itself uses. So, for example, if your container needed access to S3 and SQS, a task role would be created with polices attached that grant the desired access
+
+Example:
+
+* Set trusted idnetity/principal to be ECS Tasks:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+* Provide access to necessary resources:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowDevSQS",
+            "Effect": "Allow",
+            "Action": [
+                "sqs:GetQueueUrl",
+                "sqs:ReceiveMessage",
+                "sqs:SendMessage",
+                "sqs:ChangeMessageVisibility"
+            ],
+            "Resource": [
+                "arn:aws:sqs:eu-west-1:000000000000:dev-pending-queue",
+                "arn:aws:sqs:eu-west-1:000000000000:dev-confirmed-queue"
+            ]
+        }
+    ]
+}
+```
+
+### Task Execution Role
+
+This is what the ecs agent itself uses. This is where you would attach policies to do things like:
+
+* Pull images from ECR
+* Get secrets from SSM Parameter Store
+
+This is the role that the task itself uses. So, for example, if your container needed access to S3 and SQS, a task role would be created with polices attached that grant the desired access
+
+Also see [this](https://blog.ruanbekker.com/blog/2021/07/31/difference-with-ecs-task-and-execution-iam-roles-on-aws/) blog post.
+
+Example:
+
+* Set trusted identity/principal to be ECS:
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+* Provide the following policy:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SSMGetParameters",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter"
+            ],
+            "Resource": "arn:aws:ssm:eu-west-1:*:parameter/my-service/dev/*"
+        },
+        {
+            "Sid": "KMSDecryptParametersWithKey",
+            "Effect": "Allow",
+            "Action": [
+                "kms:GetPublicKey",
+                "kms:Decrypt",
+                "kms:GenerateDataKey",
+                "kms:DescribeKey"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
 
 ## Task Definitions
 
