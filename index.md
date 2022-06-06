@@ -21,6 +21,7 @@ paginate:
 [AWS](https://tdfacer.github.io/tech/aws).
 [Git](https://tdfacer.github.io/tech/git).
 [Linux](https://tdfacer.github.io/tech/linux).
+[Mongoose](https://tdfacer.github.io/tech/mongoose).
 [Lua](https://tdfacer.github.io/tech/lua).
 [Jekyll](https://tdfacer.github.io/tech/jekyll).
 [NeoVim](https://tdfacer.github.io/tech/neovim).
