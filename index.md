@@ -15,9 +15,6 @@ paginate:
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-<!-- [Posts](https://tdfacer.github.io/). -->
-[Posts](nginx).
-[Tech](tech).
 [AWS](https://tdfacer.github.io/tech/aws).
 [Git](https://tdfacer.github.io/tech/git).
 [Linux](https://tdfacer.github.io/tech/linux).
