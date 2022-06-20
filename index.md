@@ -23,3 +23,4 @@ paginate:
 [Jekyll](https://tdfacer.github.io/tech/jekyll).
 [NeoVim](https://tdfacer.github.io/tech/neovim).
 [Nginx](https://tdfacer.github.io/tech/nginx).
+[Python](https://tdfacer.github.io/tech/python).
