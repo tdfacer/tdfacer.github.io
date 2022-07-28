@@ -25,3 +25,4 @@ paginate:
 [NeoVim](https://tdfacer.github.io/tech/neovim).
 [Nginx](https://tdfacer.github.io/tech/nginx).
 [Python](https://tdfacer.github.io/tech/python).
+[TypeScript](https://tdfacer.github.io/tech/typescript).
