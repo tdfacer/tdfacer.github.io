@@ -7,3 +7,4 @@ categories: tech python
 This is where I will discuss python tech
 
 [Comparison](https://tdfacer.github.io/tech/python-comparison)
+[Pandas](https://tdfacer.github.io/tech/python-pandas)
