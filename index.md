@@ -26,4 +26,5 @@ paginate:
 [NeoVim](https://tdfacer.github.io/tech/neovim).
 [Nginx](https://tdfacer.github.io/tech/nginx).
 [Python](https://tdfacer.github.io/tech/python).
+[Z-Score](https://tdfacer.github.io/statistics/z-score).
 [TypeScript](https://tdfacer.github.io/tech/typescript).
