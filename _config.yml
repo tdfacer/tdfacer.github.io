@@ -55,9 +55,15 @@ collections:
   tech:
     output: true
     permalink: /:collection/:name
-  nginx:
+  statistics:
     output: true
-    permalink: /:collection/tech/:name
+    permalink: /:collection/:name
+  # nginx:
+  #   output: true
+  #   permalink: /:collection/tech/:name
+  # statistics:
+  #   output: true
+  #   permalink: /:collection/statistics/:name
 
 # collections:
 #   my_collection:
