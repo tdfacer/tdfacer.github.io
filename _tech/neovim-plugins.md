@@ -18,5 +18,19 @@ Add I switched from vim to neovim, I also switched from plug to packer as my plu
 
 This is a list of plugins that have been interesting and/or helpful when using NeoVim.
 
-* [LuaSnip](https://GitHub.com/L3MON4D3/LuaSnip)
-* [Plenary](https://GitHub.com/nvim-lua/plenary.
+### LuaSnip
+
+[LuaSnip](https://GitHub.com/L3MON4D3/LuaSnip)
+
+### Plenary
+
+[Plenary](https://GitHub.com/nvim-lua/plenary.
+
+### Telescope
+
+[Telescope](https://github.com/nvim-telescope/telescope.nvim)
+
+* Quickfix workflow
+  * Use any command to populate a telescope buffer, e.g. `:Telescope git_files`
+  * Optinally do additional filtering via typing in the search bar
+  * Press `<C-q>` (control + `q`) to populate the quickfix list
