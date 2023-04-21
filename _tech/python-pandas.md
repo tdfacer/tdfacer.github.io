@@ -38,3 +38,10 @@ df[filt]
 >    time_start    time_end
 > 3  2023-02-01  2023-02-02
 ```
+
+## Functions and Methods
+
+* `isna()`
+
+On a dataframe, we can use the `isna()` function to get values that are N/A
+Helpfult to use `df.isna().sum()` to get a count of N/A values on a given Dataframe
