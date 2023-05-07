@@ -6,6 +6,7 @@ categories: tech neovim
 ---
 This is where I will discuss neovim tech
 
+[NeoVim Debugging](https://tdfacer.github.io/tech/neovim-debugging)
 [NeoVim LSP](https://tdfacer.github.io/tech/neovim-lsp)
 [NeoVim Lua](https://tdfacer.github.io/tech/neovim-lua)
 [NeoVim Plugins](https://tdfacer.github.io/tech/neovim-plugins)
