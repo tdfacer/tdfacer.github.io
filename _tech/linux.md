@@ -6,5 +6,6 @@ categories: tech linux
 ---
 This is where I will discuss linux tech
 
+[linux-i3](https://tdfacer.github.io/tech/linux-i3-wm)
 [xmodmap-vim-bindings](https://tdfacer.github.io/tech/linux-xmodmap-vim-bindings)
-[xmodmap-vim-bindings](https://tdfacer.github.io/tech/linux-i3-wm)
+[linux-xprop](https://tdfacer.github.io/tech/linux-xprop-wm)
