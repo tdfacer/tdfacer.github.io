@@ -9,3 +9,4 @@ This is where I will discuss linux tech
 [linux-i3](https://tdfacer.github.io/tech/linux-i3-wm)
 [xmodmap-vim-bindings](https://tdfacer.github.io/tech/linux-xmodmap-vim-bindings)
 [linux-xprop](https://tdfacer.github.io/tech/linux-xprop-wm)
+[linux-yay](https://tdfacer.github.io/tech/linux-yay)
