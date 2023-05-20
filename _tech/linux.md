@@ -4,9 +4,9 @@ title:  "Linux tech"
 date:   2022-05-21 14:07:21 -0600
 categories: tech linux
 ---
-This is where I will discuss linux tech
 
+[autostart](https://tdfacer.github.io/tech/linux-autostart.md)
 [linux-i3](https://tdfacer.github.io/tech/linux-i3-wm)
 [xmodmap-vim-bindings](https://tdfacer.github.io/tech/linux-xmodmap-vim-bindings)
-[linux-xprop](https://tdfacer.github.io/tech/linux-xprop-wm)
-[linux-yay](https://tdfacer.github.io/tech/linux-yay)
+[xprop](https://tdfacer.github.io/tech/linux-xprop-wm)
+[yay](https://tdfacer.github.io/tech/linux-yay)
