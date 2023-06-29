@@ -24,3 +24,7 @@ Sometimes the error messages are not very helpful and you need to `grep` through
 #### Plugin Updates
 
 One of the first things to try is simply updating your plugins. With a `packer` backed system there is likely an `augroup` with an `autocmd` that will update plugins on buffer write. Open your plugins file and save to trigger an update.
+
+#### Loaded Package Modules
+
+You can use the `package.loaded` table to see what is currently loaded, e.g. `vim.print(package.loaded["explain-it"])`
