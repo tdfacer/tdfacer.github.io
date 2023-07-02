@@ -17,6 +17,7 @@ paginate:
 
 [AWS](https://tdfacer.github.io/tech/aws).
 [Git](https://tdfacer.github.io/tech/git).
+[GPU](https://tdfacer.github.io/tech/gpu).
 [Kindle](https://tdfacer.github.io/tech/kindle).
 [Linux](https://tdfacer.github.io/tech/linux).
 [MongoDB](https://tdfacer.github.io/tech/mongodb)
