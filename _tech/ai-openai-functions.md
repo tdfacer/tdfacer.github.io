@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AI OpenAI Functions"
-date:   2023-07-24 14:07:21 -0600
+date:   2023-07-23 14:07:21 -0600
 categories: tech ai openai
 tags: tech ai openai
 author: Trevor Facer
