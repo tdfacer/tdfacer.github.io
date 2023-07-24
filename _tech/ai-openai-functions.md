@@ -2,10 +2,12 @@
 layout: post
 title:  "AI OpenAI Functions"
 date:   2023-07-24 14:07:21 -0600
-categories: tech ai openai function_calling
-tags: tech ai openai function_calls
+categories: tech ai openai
+tags: tech ai openai
 author: Trevor Facer
 ---
+
+## Overview
 
 Today I am exploring OpenAI's [function calling](https://openai.com/blog/function-calling-and-other-api-updates?ref=upstract.com) feature. This is an interesting feature that allows one to use an LLM to get back structured data. It doesn't sound like much of a change at first, but there are some pretty cool applications. With this post I am going to walk through one example that I played around with.
 
@@ -251,15 +253,15 @@ When prompted, carefully review the script output. If you are comfortable and wi
 
 #### Script Output
 
-![open-ai-function-call-script-output](../images/open-ai-function-call-script-output.png){:class="img-responsive"}
+![open-ai-function-call-script-output](../images/open-ai-function-call-script-output.png)
 
 #### Container
 
-![open-ai-function-call-containers](../images/open-ai-function-call-containers.png){:class="img-responsive"}
+![open-ai-function-call-containers](../images/open-ai-function-call-containers.png)
 
 #### Jupyter Server
 
-![open-ai-jupyter-server](../images/open-ai-jupyter-server.png){:class="img-responsive"}
+![open-ai-jupyter-server](../images/open-ai-jupyter-server.png)
 
 #### Full Script
 
@@ -363,4 +365,5 @@ if __name__ == "__main__":
     orchestrate()
 ```
 
-Note that we are using the default `temperature` of 0.2, which determines how random or deterministic our response will be. This means that it is possible for a subsequent execution to get a different response, which may or may not work exactly as expected. 
+
+* Final Note that we are using the default `temperature` of 0.2, which determines how random or deterministic our response will be. This means that it is possible for a subsequent execution to get a different response, which may or may not work exactly as expected. 
