@@ -15,6 +15,7 @@ paginate:
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
+[AI](https://tdfacer.github.io/tech/ai).
 [AWS](https://tdfacer.github.io/tech/aws).
 [Git](https://tdfacer.github.io/tech/git).
 [GPU](https://tdfacer.github.io/tech/gpu).
