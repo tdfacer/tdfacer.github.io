@@ -7,11 +7,11 @@ tags: tech ai openai
 author: Trevor Facer
 ---
 
-## Overview
+# Overview
 
 Today I am exploring OpenAI's [function calling](https://openai.com/blog/function-calling-and-other-api-updates?ref=upstract.com) feature. This is an interesting feature that allows one to use an LLM to get back structured data. It doesn't sound like much of a change at first, but there are some pretty cool applications. With this post I am going to walk through one example that I played around with.
 
-## Use Function Calling to Work With Docker
+# Use Function Calling to Work With Docker
 
 Recently, I have been playing around with Jupyter Notebooks. I wanted to see if I could use OpenAI's Function Calling feature to build and run a Docker image that sets up a Jupyter Notebook from scratch. Note that I am on an Arch Linux system. Here are the steps I identified in order to do so:
 
@@ -20,7 +20,7 @@ Recently, I have been playing around with Jupyter Notebooks. I wanted to see if 
 3. Generate commands that can be used to build an image from #2 and run a container from it
 4. Orchestrate these function calls, adding a user-input safeguard prior to execution of the Docker commands on the host system
 
-### Project Initialization
+## Project Initialization
 
 With this goal in mind, it was time to set up a new project:
 
@@ -34,7 +34,7 @@ git add .
 git commit -m "chore(init): Initialize project"
 ```
 
-### Install dependencies
+## Install dependencies
 
 There are a few requirements for this project. Here is a `requirements.txt` file to get started:
 
@@ -65,11 +65,11 @@ Now, in your project's root directory, execute the following:
 pip install -r requirements.txt
 ```
 
-### Application Code
+## Application Code
 
 Create a file named `main.py` and open it using the text editor of your choice.
 
-#### Schemas
+### Schemas
 
 In this code, I am using `pydantic` to build the schemas for the structured data responses from OpenAI Function Calling. This is a way to "type" the expected responses that we get back from OpenAI.
 
@@ -98,7 +98,7 @@ class DockerfileAIResponse(BaseModel):
     dockerfile_contents: list[str]
 ```
 
-#### OpenAI Function Calling
+### OpenAI Function Calling
 
 Let's create a function that can be used for each interaction with OpenAI.
 
@@ -130,7 +130,7 @@ def make_function_call(msg_content: str, desc: str, model_schema: dict[str, any]
     return output
 ```
 
-#### Jupyter Script
+### Jupyter Script
 
 Now we're getting to the exciting part!
 
@@ -156,7 +156,7 @@ def generate_jupyter_notebook(port: str) -> StepByStepInterpreterAIResponse:
     return jupyter_script
 ```
 
-#### Dockerfile
+### Dockerfile
 
 In this step we will use the commands in our response from our Jupyter Script API call to help generate a `Dockerfile`.
 
@@ -187,7 +187,7 @@ def generate_dockerfile(jupyter_script: StepByStepInterpreterAIResponse, port: s
     return dockerfile
 ```
 
-#### Host Commands
+### Host Commands
 
 Great! We now have:
 
@@ -218,7 +218,7 @@ def generate_host_commands(dockerfile: DockerfileAIResponse, port: str) -> None:
             os.system(command)
 ```
 
-### Orchestration
+## Orchestration
 
 Now it's time to piece the code together. I did this by defining a function called `orchestrate` function, where I simply call the functions for each step as defined above, passing responses from previous steps into the following steps. I also use an `OPENAI_API_KEY` environment variable to authenticate with OpenAI. In other applications, I've often used `python-dotenv` for secret management. The env var will be fine in this use case.
 
@@ -241,7 +241,7 @@ if __name__ == "__main__":
     orchestrate()
 ```
 
-### Execution
+## Execution
 
 Now our script is complete. For easy copy/paste, see the full script below. Save your file and start your execution:
 
@@ -251,19 +251,19 @@ python3 main.py
 
 When prompted, carefully review the script output. If you are comfortable and wish to proceed, enter `y` and press "Enter."
 
-#### Script Output
+### Script Output
 
 ![open-ai-function-call-script-output](../images/open-ai-function-call-script-output.png)
 
-#### Container
+### Container
 
 ![open-ai-function-call-containers](../images/open-ai-function-call-containers.png)
 
-#### Jupyter Server
+### Jupyter Server
 
 ![open-ai-jupyter-server](../images/open-ai-jupyter-server.png)
 
-#### Full Script
+### Full Script
 
 ```python
 from openai.openai_response import OpenAIResponse
