@@ -11,3 +11,4 @@ This is where I will discuss neovim tech
 [NeoVim Lua](https://tdfacer.github.io/tech/neovim-lua)
 [NeoVim Plugins](https://tdfacer.github.io/tech/neovim-plugins)
 [NeoVim Selected Lines](https://tdfacer.github.io/tech/neovim-selected-lines)
+[NeoVim Terminal](https://tdfacer.github.io/tech/neovim-terminal)
